@@ -9,11 +9,8 @@ warnings.filterwarnings("ignore")
 
 app = Flask(__name__)  # intitialize the flaks app  # common 
 model = pickle.load(open('pickle/lr_model.pkl', 'rb'))
-user_rating = pickle.load(open('pickle/user_final_rating.pkl','rb'))
 vectorizer = pickle.load(open('pickle/vectorizer.pkl','rb'))
 
-file=pd.read_csv("dataset/sample30.csv")
-data=pd.read_csv("dataset/corrdata.csv")
 common_user_predicted_ratings = pd.read_csv("dataset/common_user_predicted_ratings.csv")
 data = pd.read_csv("dataset/cleandata.csv")
 
