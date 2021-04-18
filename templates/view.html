@@ -1,0 +1,45 @@
+<!-- <!doctype html>
+<title>Prediction</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Dashboard</h1>
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  {% endfor %}
+</div> -->
+<!DOCTYPE html>
+<html >
+<body  align="center" style="background-color:lightblue;">
+<head>
+  <meta charset="UTF-8">
+  <title>Model Deployment</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 28px;
+      }
+    </style>
+
+
+</head>
+
+<body>
+ <div class="login">
+  <h1 style="text-align:center">Product Recommendation System</h2> 
+    <form align="center" action="{{ url_for('recommendations')}}"method="post">
+      <h2 style="text-align:center">Enter user id</h2>
+      <input type="text" style="text-align:center" name="user_id" placeholder="user_id" required="required" />
+      <br<br>
+      <button align="center" type="submit" class="btn btn-primary btn-block btn-large">Get Recommendations</button>
+    </form>
+  <br>
+   <br>
+     {{ recommendation_text }} 
+
+ </div>
+
+
+</body>
+</html>
